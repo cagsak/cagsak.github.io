@@ -1,0 +1,39 @@
+body {
+    width: max-content;
+    height: max-content;
+}
+
+.background {
+    width: fit-content;
+    height: fit-content;
+    flex-shrink: 0;
+    background: "#D9D9D9";
+}
+
+.left-bar {
+    width: "250px";
+    height: "1080px";
+    flex-shrink: 0;
+    border-radius: "0px 50px 50px 0px";
+    background: "#C14444";
+}
+
+svg {
+    width: 6.25rem;
+    height: 6.25rem;
+    flex-shrink: 0;
+    fill: #D9D9D9;
+}
+
+p {
+    width: "740px";
+    height: "761px";
+    flex-shrink: 0;
+    color: "#000000";
+    font-family: "Jost";
+    font-size: "70px";
+    font-style: "normal";
+    font-weight: 400;
+    line-height: "normal";
+
+}
