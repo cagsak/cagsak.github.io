@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name - Personal Website</title>
-    <link rel="stylesheet" href="../css/chatgpt.css">
+    <link rel="stylesheet" href="../css/bing.css">
   </head>
   <body>
     <!-- Header Section -->
@@ -34,42 +34,29 @@
       <div class="grid">
         <!-- Project 1 -->
         <div class="project">
-          <img src="path/to/project1.jpg" alt="Project 1">
+          <img src="../images/word-master.png" alt="Project 1">
           <h3>Project 1</h3>
-          <p>
-            Description of Project 1. Include details like technologies used, challenges faced, and outcomes.
+          <p class="project-description">
+            A word game for android.
           </p>
-          <a href="#">View Project</a>
         </div>
 
         <!-- Project 2 -->
         <div class="project">
-          <img src="path/to/project2.jpg" alt="Project 2">
+          <img src="../images/box-game.png" alt="Project 2">
           <h3>Project 2</h3>
-          <p>
-            Description of Project 2. Include details like technologies used, challenges faced, and outcomes.
+          <p class="project-description">
+            A game for pc and the web.
           </p>
-          <a href="#">View Project</a>
         </div>
 
         <!-- Project 3 -->
         <div class="project">
           <img src="path/to/project3.jpg" alt="Project 3">
           <h3>Project 3</h3>
-          <p>
+          <p class="project-description">
             Description of Project 3. Include details like technologies used, challenges faced, and outcomes.
           </p>
-          <a href="#">View Project</a>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="project">
-          <img src="path/to/project4.jpg" alt="Project 4">
-          <h3>Project 4</h3>
-          <p>
-            Description of Project 4. Include details like technologies used, challenges faced, and outcomes.
-          </p>
-          <a href="#">View Project</a>
         </div>
 
       </div><!-- End of grid -->
@@ -85,7 +72,23 @@
     <footer><p>© 2023 Your Name. All rights reserved.</p></footer>
 
     <!-- JavaScript -->
-    <script src="script.js"></script>
+    <script>
+                // Get all project elements
+        const projects = document.querySelectorAll('.project');
 
+        // Add mouseover and mouseout event listeners to each project
+        projects.forEach(project => {
+          project.addEventListener('mouseover', () => {
+            // Add the "expanded" class to the hovered project
+            project.classList.add('expanded');
+          });
+          project.addEventListener('mouseout', () => {
+            // Remove the "expanded" class from the unhovered project
+            project.classList.remove('expanded');
+          });
+        });
+
+    </script>
+    
   </body><!-- End of body -->
 </html><!-- End of html -->

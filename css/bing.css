@@ -1,0 +1,196 @@
+/* Add your custom styles here */
+
+/* Global Styles */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #555;
+  }
+  
+  /* Header Section */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background-color: #f4f4f4;
+  }
+  
+  header .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+  }
+  
+  header .job-title {
+      font-size:1.2rem; 
+      margin-top:.5rem; 
+      font-weight:bold
+  }
+  header .job-title a{
+      color:#333; 
+      text-decoration:none
+  }
+  header .job-title a:hover{
+      color:#555
+  }
+  header .job-description {
+      font-size:1.5rem; 
+      margin-top:1rem; 
+      font-weight:bold
+  }
+  /* About Me Section */
+  #about-me {
+      padding:2em
+  }
+  #about-me h2{
+      font-size:2em; 
+      font-weight:bold
+  }
+  #about-me p{
+      font-size:1.2em
+  }
+  /* Projects Section */
+  #projects {
+      padding:2em
+  }
+  #projects h2{
+      font-size:2em; 
+      font-weight:bold
+  }
+  #projects .grid{
+      display:grid; 
+      grid-template-columns:repeat(3,1fr); 
+      grid-gap:2em
+  }
+  #projects .project{
+      display:flex; 
+      flex-direction:column; 
+      cursor:pointer; 
+      align-items: center;
+      box-shadow:.125em .125em .25em rgba(0,0,0,.1); 
+      transition:.3s ease-in-out; 
+      height:250px
+  }
+  #projects .project:hover{
+      transform:scale(1.05)
+  }
+  #projects .project img{
+      object-fit:contain;
+      width: 60%; 
+      height: 60%
+  }
+  #projects .project h3{
+      font-size:1.5em; 
+      margin:.5em; 
+      font-weight:bold
+  }
+  #projects .project p.project-description{
+      font-size:1.2em; 
+      margin:.5em; 
+      height:0; 
+      overflow:hidden; 
+      transition:.5s ease-in-out
+  }
+  #projects .project:hover p.project-description{
+      height:auto
+  }
+  /* Contact Section */
+  #contact {
+      padding:2em
+  }
+  #contact h2{
+        font-size:2em; 
+        font-weight:bold
+  }
+  #contact p{
+        font-size:1.2em
+  }
+  /* Footer Section */
+  footer{
+        padding:.5em; 
+        text-align:center; 
+        background-color:#333; 
+        color:#fff
+  }
+  
+  /* Media Queries */
+  @media (max-width:767px){
+      
+  /* Header Section */
+  header .profile-image {
+        width:100px; 
+        height:auto
+  }
+  header h1{
+        font-size:2rem
+  }
+  header .job-title{
+        font-size:.9rem
+  }
+  header .job-description{
+        font-size:.9rem
+  }
+  /* About Me Section */
+  #about-me h2{
+        font-size:.9rem
+  }
+  #about-me p{
+        font-size:.9rem
+  }
+  /* Projects Section */
+  #projects h2{
+        font-size:.9rem
+  }
+  #projects .grid{
+        grid-template-columns:auto; 
+        grid-gap:.5em
+  }
+  #projects .project{
+        height:auto; 
+        box-shadow:none;
+        align-items: center; 
+        transition:none
+  }
+  #projects .project:hover{
+        transform:none
+  }
+  #projects .project img{
+        object-fit:contain;
+        width:60%; 
+        height:60%
+  }
+  #projects .project h3{
+        font-size:.9rem; 
+        margin:.25em
+  }
+  #projects .project p.project-description{
+        font-size:.9rem; 
+        margin:.25em; 
+        transition:none
+  }
+  /* Contact Section */
+  #contact h2{
+        font-size:.9rem
+  }
+  #contact p{
+        font-size:.9rem
+  }    
+  }
+  
+  
