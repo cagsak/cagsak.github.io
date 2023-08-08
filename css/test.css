@@ -1,0 +1,15 @@
+* {
+    -webkit-font-smoothing: antialiased;
+}
+
+#__next, body, html {
+    height: 100%;
+}
+
+body {
+    font-family: inherit;
+    line-height: inherit;
+    margin: 0;
+    display: block;
+}
+
