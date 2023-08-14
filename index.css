@@ -15,6 +15,34 @@ body {
     display: none;
 }
 
+.wave1 {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave1 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+}
+
+.wave2 {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave2 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 60px;
+}
+
 hr {
     height: 0;
     color: inherit
