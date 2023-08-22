@@ -25,10 +25,6 @@ html {
     text-align: center;
   }
   
-  input.check-toggle-round-flat:checked ~ .off {
-    color: #F36F25;
-  }
-  
   input.check-toggle-round-flat:checked ~ .on {
     color: #fff;
   }
@@ -36,7 +32,6 @@ html {
   .switch > span.on {
     left: 0;
     padding-left: 2px;
-    color: #F36F25;
   }
   
   .switch > span.off {
@@ -65,7 +60,6 @@ html {
     padding: 2px;
     width: 97px;
     height: 35px;
-    background-color: #F36F25;
     -webkit-border-radius: 60px;
     -moz-border-radius: 60px;
     -ms-border-radius: 60px;
@@ -83,7 +77,6 @@ html {
     left: 2px;
     bottom: 2px;
     right: 2px;
-    background-color: #F36F25;
     
     -moz-border-radius: 60px;
     -ms-border-radius: 60px;

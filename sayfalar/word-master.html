@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charSet="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon"
-        href="../fotograflar/hacker.ico" />
+    <link rel="icon" href="../fotograflar/hacker.ico" />
     <title>Word Master</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -16,7 +16,8 @@
             scroll-behavior: smooth;
         }
     </style>
-    <meta name="description" content="Word Mater, İngilizce ve Türkçe dil desteği olan ve de farklı modlara sahip olan bir kelime oyunu.">
+    <meta name="description"
+        content="Word Mater, İngilizce ve Türkçe dil desteği olan ve de farklı modlara sahip olan bir kelime oyunu.">
     <meta name="title" content="Word Master - A word game by Mustafa Çağşak">
     <link rel="canonical" href="../index.html">
     <link rel="preload" href="../index.css" as="style" />
@@ -65,15 +66,40 @@
                         </ul>
                     </div>
                     <div class="flex-1 flex flex-col items-center gap-4 whitespace-nowrap">
-                        <div class="flex flex-col items-center justify-center gap-4 w-full truncate"><a
-                                class="max-w-full overflow-hidden grid" href="../">
-                                <h1 class="heading-small lg:heading-medium overflow-hidden whitespace-nowrap overflow-ellipsis"
+                        <div class="flex flex-col items-center justify-center gap-4 w-full truncate">
+                            <a class="max-w-full overflow-hidden grid" href="../">
+                                <h1 style="display: none;" class="TR heading-small lg:heading-medium overflow-hidden whitespace-nowrap overflow-ellipsis"
                                     style="color:#FFFFFF;font-family:Varela Round, sans-serif;font-weight:400">
                                     Ana Sayfa</h1>
-                            </a></div>
-                    </div>
-                    <div class="flex justify-end whitespace-nowrap">
-                        <div class="ml-auto lg:hidden"></div>
+                                <h1 style="display: none;" class="EN heading-small lg:heading-medium overflow-hidden whitespace-nowrap overflow-ellipsis"
+                                    style="color:#FFFFFF;font-family:'Ubuntu', sans-serif;font-weight:700">
+                                    Home Page</h1>
+                            </a>
+                        </div>
+
+                        <div class="switch">
+                            <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+                            <label for="language-toggle"></label>
+                            <span class="on">TR</span>
+                            <span class="off">EN</span>
+                        </div>
+                        <style>
+                            input.check-toggle-round-flat:checked~.off {
+                                color: #1f7959;
+                            }
+
+                            .switch>span.on {
+                                color: #1f7959;
+                            }
+
+                            input.check-toggle-round-flat+label {
+                                background-color: #1f7959;
+                            }
+
+                            input.check-toggle-round-flat+label:before {
+                                background-color: #1f7959;
+                            }
+                        </style>
                     </div>
                 </div>
             </header>
@@ -84,39 +110,54 @@
                         <div class="flex-1 flex flex-col items-center lg:items-start">
                             <div class="rich-text-block" style="color:#111827">
                                 <h2>Word Master</h2>
-                                <p>Word Mater, İngilizce ve Türkçe dil desteği olan ve de farklı modlara sahip olan bir
-                                    kelime oyunu. Aynı zamanda Android için geliştirdiğim ilk uygulama olduğundandır ki
-                                    için bendeki yeri farklı :) . Aşağıda Oyun içi Görselleri görebilirsiniz.</p>
+                                <div>
+                                    <p style="display: none;" class="TR">Word Mater, İngilizce ve Türkçe dil desteği olan ve de farklı modlara sahip olan bir kelime oyunu. Aynı zamanda Android için geliştirdiğim ilk uygulama olduğundandır ki için bendeki yeri farklı :) . Aşağıda Oyun içi Görselleri görebilir, Google Play Store linki üzerinden oyunu indirebilirsiniz.</p>
+                                    <p style="display: none;" class="EN">Word Mater is a word game that has different game modes with English and Turkish language support. It is also the first application I developed for Android, which is why it has a different place for me :) . You can see the in-game visuals below and download the game via the Google Play Store link.</p>
+                                </div>
+                                <div>
+                                    <div style="display: none;" class="TR">
+                                        <a style="display: flex;height: 50%;width: 50%;" href='https://play.google.com/store/apps/details?id=com.cagsak.wordmaster&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt="Google Play' den alın" src="../fotograflar/tr.png" /></a>
+                                    </div>
+                                    <div style="display: none;" class="EN">
+                                        <a style="display: flex;height: 50%;width: 50%;" href='https://play.google.com/store/apps/details?id=com.cagsak.wordmaster&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src="../fotograflar/en.png"/></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="flex-1 flex w-full justify-center lg:justify-start lg:!justify-end">
                             <div class="flex-shrink-0 relative w-full mx-auto aspect-w-16 aspect-h-9"><span
                                     style="box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:absolute;top:0;left:0;bottom:0;right:0"><img
-                                        alt="Word Master"
-                                        decoding="async" data-nimg="fill"
+                                        alt="Word Master" decoding="async" data-nimg="fill"
                                         class="rounded-lg md:rounded-xl lg:rounded-2xl"
                                         style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;object-fit:cover;object-position:center center" /><img
-                                            alt="Word Master"
-                                            src="../fotograflar/word-master.png"
-                                            decoding="async" data-nimg="fill"
-                                            style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;object-fit:cover;object-position:center center"
-                                            class="rounded-lg md:rounded-xl lg:rounded-2xl"
-                                            loading="lazy" /></span></div>
+                                        alt="Word Master" src="../fotograflar/word-master.png" decoding="async"
+                                        data-nimg="fill"
+                                        style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;object-fit:cover;object-position:center center"
+                                        class="rounded-lg md:rounded-xl lg:rounded-2xl" loading="lazy" /></span></div>
                         </div>
                     </div>
                 </div>
             </section>
             <div class="wave2">
-                <svg data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill" style="fill: #2CA67C;"></path>
+                <svg data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="shape-fill" style="fill: #2CA67C;"></path>
                 </svg>
             </div>
             <section id="list-1" class="flex flex-none flex-shrink-0 relative z-10 items-center"
                 style="background-color:#2CA67C;min-height:calc(240px - 0px)">
                 <div class="container mx-auto relative z-10 pt-8 lg:pt-12 pb-8 lg:pb-12">
-                    <h2 class="heading-large mb-6 text-center"
-                        style="color:#FFFFFF;font-family:Varela Round, sans-serif;font-weight:400">Oyun İçi
-                        Görseller</h2>
+                    <div style="display: none;" class="TR" >
+                        <h2 class="heading-large mb-6 text-center"
+                        style="color:#FFFFFF;font-family:Varela Round, sans-serif;font-weight:400">Oyun İçi Görseller
+                        </h2>
+                    </div>
+                    <div style="display: none;" class="EN" >
+                        <h2 class="heading-large mb-6 text-center"
+                        style="color:#FFFFFF;font-family:Varela Round, sans-serif;font-weight:400">In-Game Views</h2>
+                    </div>
                     <div class="flex flex-col sm:flex-row flex-wrap gap-10 justify-center"><span
                             class="hidden justify-center justify-end justify-start"></span>
                         <div class="block-list-item w-full">
@@ -126,12 +167,10 @@
                                         decoding="async" data-nimg="fill"
                                         class="rounded-2xl md:rounded-3xl lg:rounded-4xl"
                                         style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;object-fit:cover;object-position:center center" /><img
-                                            src="../fotograflar/oyunici/1.png"
-                                            alt="Screenshots of the game Word Master"
-                                            decoding="async" data-nimg="fill"
-                                            style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;object-fit:cover;object-position:center center"
-                                            class="rounded-2xl md:rounded-3xl lg:rounded-4xl"
-                                            loading="lazy" /></span></div>
+                                        src="../fotograflar/oyunici/1.png" alt="Screenshots of the game Word Master"
+                                        decoding="async" data-nimg="fill"
+                                        style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;object-fit:cover;object-position:center center"
+                                        class="rounded-2xl md:rounded-3xl lg:rounded-4xl" loading="lazy" /></span></div>
                             <div class="text-center"></div>
                         </div>
                         <div class="block-list-item w-full">
@@ -141,12 +180,10 @@
                                         decoding="async" data-nimg="fill"
                                         class="rounded-2xl md:rounded-3xl lg:rounded-4xl"
                                         style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;object-fit:cover;object-position:center center" /><img
-                                            src="../fotograflar/oyunici/2.jpg"
-                                            alt="Screenshots of the game Word Master"
-                                            decoding="async" data-nimg="fill"
-                                            style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;object-fit:cover;object-position:center center"
-                                            class="rounded-2xl md:rounded-3xl lg:rounded-4xl"
-                                            loading="lazy" /></span></div>
+                                        src="../fotograflar/oyunici/2.jpg" alt="Screenshots of the game Word Master"
+                                        decoding="async" data-nimg="fill"
+                                        style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;object-fit:cover;object-position:center center"
+                                        class="rounded-2xl md:rounded-3xl lg:rounded-4xl" loading="lazy" /></span></div>
                             <div class="text-center"></div>
                         </div>
                         <div class="block-list-item w-full">
@@ -156,12 +193,10 @@
                                         decoding="async" data-nimg="fill"
                                         class="rounded-2xl md:rounded-3xl lg:rounded-4xl"
                                         style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;object-fit:cover;object-position:center center" /><img
-                                            src="../fotograflar/oyunici/3.jpg"
-                                            alt="Screenshots of the game Word Master"
-                                            decoding="async" data-nimg="fill"
-                                            style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;object-fit:cover;object-position:center center"
-                                            class="rounded-2xl md:rounded-3xl lg:rounded-4xl"
-                                            loading="lazy" /></span></div>
+                                        src="../fotograflar/oyunici/3.jpg" alt="Screenshots of the game Word Master"
+                                        decoding="async" data-nimg="fill"
+                                        style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;object-fit:cover;object-position:center center"
+                                        class="rounded-2xl md:rounded-3xl lg:rounded-4xl" loading="lazy" /></span></div>
                             <div class="text-center"></div>
                         </div>
                         <div class="block-list-item w-full">
@@ -171,12 +206,10 @@
                                         decoding="async" data-nimg="fill"
                                         class="rounded-2xl md:rounded-3xl lg:rounded-4xl"
                                         style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;object-fit:cover;object-position:center center" /><img
-                                            src="../fotograflar/oyunici/4.jpg"
-                                            alt="Screenshots of the game Word Master"
-                                            decoding="async" data-nimg="fill"
-                                            style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;object-fit:cover;object-position:center center"
-                                            class="rounded-2xl md:rounded-3xl lg:rounded-4xl"
-                                            loading="lazy" /></span></div>
+                                        src="../fotograflar/oyunici/4.jpg" alt="Screenshots of the game Word Master"
+                                        decoding="async" data-nimg="fill"
+                                        style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;object-fit:cover;object-position:center center"
+                                        class="rounded-2xl md:rounded-3xl lg:rounded-4xl" loading="lazy" /></span></div>
                             <div class="text-center"></div>
                         </div>
                         <div class="block-list-item w-full">
@@ -186,22 +219,27 @@
                                         decoding="async" data-nimg="fill"
                                         class="rounded-2xl md:rounded-3xl lg:rounded-4xl"
                                         style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;object-fit:cover;object-position:center center" /><img
-                                            src="../fotograflar/oyunici/5.jpg"
-                                            alt="Screenshots of the game Word Master"
-                                            decoding="async" data-nimg="fill"
-                                            style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;object-fit:cover;object-position:center center"
-                                            class="rounded-2xl md:rounded-3xl lg:rounded-4xl"
-                                            loading="lazy" /></span></div>
+                                        src="../fotograflar/oyunici/5.jpg" alt="Screenshots of the game Word Master"
+                                        decoding="async" data-nimg="fill"
+                                        style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;object-fit:cover;object-position:center center"
+                                        class="rounded-2xl md:rounded-3xl lg:rounded-4xl" loading="lazy" /></span></div>
                             <div class="text-center"></div>
                         </div>
                     </div>
                 </div>
             </section>
             <div class="wave1" style="background-color: #2CA67C;">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill" style="fill: #185943;"></path>
-                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill" style="fill: #185943;"></path>
-                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill" style="fill: #185943;"></path>
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                        opacity=".25" class="shape-fill" style="fill: #185943;"></path>
+                    <path
+                        d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                        opacity=".5" class="shape-fill" style="fill: #185943;"></path>
+                    <path
+                        d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                        class="shape-fill" style="fill: #185943;"></path>
                 </svg>
             </div>
             <footer id="website-footer" class="flex-1 relative z-10" style="background-color:#185943;color:#FFFFFF">
@@ -209,13 +247,22 @@
                     <div class="flex flex-col justify-center gap-12 text-center">
                         <div class="flex flex-col items-center gap-6">
                             <div class="max-w-full overflow-hidden grid">
-                                <h3 class="heading-medium overflow-hidden whitespace-nowrap overflow-ellipsis xl:heading-small"
+                                <h3 style="display: none;" class="TR" class="heading-medium overflow-hidden whitespace-nowrap overflow-ellipsis xl:heading-small"
                                     style="color:#FFFFFF;font-family:Varela Round, sans-serif;font-weight:400">
                                     İletişim</h3>
+                                <h3 style="display: none;" class="EN" class="heading-medium overflow-hidden whitespace-nowrap overflow-ellipsis xl:heading-small"
+                                style="color:#FFFFFF;font-family:'Ubuntu', sans-serif;font-weight:700">
+                                Contact Me</h3>
                             </div>
-                            <div class="body-normal" style="color:#FFFFFF">Bana bu adresten ulaşabilirsiniz: <a href=
-                                "mailto: mustafacagsak1@gmail.com" class="__cf_email__">
-                                mustafacagsak1@gmail.com</a>
+                            <div style="display: none;" class="EN body-normal" style="color:#FFFFFF">
+                                You can reach me from here: <a href="mailto: mustafacagsak1@gmail.com"
+                                    class="__cf_email__">
+                                    mustafacagsak1@gmail.com</a>
+                            </div>
+                            <div style="display: none;" class="TR body-normal" style="color:#FFFFFF">
+                                Bana bu adresten ulaşabilrisiniz: <a href="mailto: mustafacagsak1@gmail.com"
+                                    class="__cf_email__">
+                                    mustafacagsak1@gmail.com</a>
                             </div>
                         </div>
                         <div class="flex flex-col justify-center gap-12 lg:gap-14">
@@ -260,12 +307,60 @@
                                     </a></li>
                             </ul>
                         </div>
-                        <p class="body-normal lg:text-right whitespace-nowrap !text-center">Durable kullanılarak yapıldı</p>
+                        <p style="display: none;" class="TR"
+                            class="body-normal lg:text-right whitespace-nowrap !text-center">Durable kullanılarak
+                            yapıldı</p>
+                        <p style="display: none;" class="EN"
+                            class="body-normal lg:text-right whitespace-nowrap !text-center">Made with Durable</p>
                     </div>
                 </div>
             </footer>
         </div>
     </div>
 </body>
+
+<script type="text/javascript">
+
+    function tr(){
+        elements = document.getElementsByClassName("TR");
+        for(var i = 0 ; i < elements.length ; i++){
+            elements[i].style.display = "block"
+        }
+        elements = document.getElementsByClassName("EN");
+        for(var i = 0 ; i < elements.length ; i++){
+            elements[i].style.display = "none"
+        }
+        document.getElementsByTagName("html")[0].lang = "tr-TR";
+    }
+
+    function en(){
+        elements = document.getElementsByClassName("EN");
+        for(var i = 0 ; i < elements.length ; i++){
+            elements[i].style.display = "block"
+        }
+        elements = document.getElementsByClassName("TR");
+        for(var i = 0 ; i < elements.length ; i++){
+            elements[i].style.display = "none"
+        }
+        document.getElementsByTagName("html")[0].lang = "en-US";
+    }
+
+    var userLang = navigator.language || navigator.userLanguage; 
+    if(userLang == "tr-TR"){
+        tr();
+        document.getElementsByClassName("check-toggle")[0].checked = false;
+    }else{
+        en();
+        document.getElementsByClassName("check-toggle")[0].checked = true;
+    }
+
+    document.getElementsByClassName('check-toggle')[0].addEventListener('change', (event) => {
+      if (event.currentTarget.checked) {
+        en();
+      } else {
+        tr();
+      }
+    })
+</script>
 
 </html>
