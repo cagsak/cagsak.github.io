@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <meta name="google-site-verification" content="QuW0dfC8fmYQkyDp2nbgLz9lJqwxPMYLq9TdijoEcFo"/>
+    <meta name="description" content="Merhaba, Ben Mustafa Çağşak. Sürekli yeni şeyler öğrenmeye çalışan bir geliştirici ve aynı zamanda bir üniversite öğrencisiyim.">
+    <meta name="title" content="Mustafa Çağşak - A developer and a student">
     <link rel="preload" href="index.css" as="style">
     <link rel="stylesheet" href="index.css" data-n-g="">
 </head>
@@ -74,11 +76,12 @@
                                  "flex flex-col items-center justify-center gap-4 w-full truncate">
                         <a class="max-w-full overflow-hidden grid" target=
                                 "_self" href="/">
-                            <h1 class=
-                                        "heading-small lg:heading-medium overflow-hidden whitespace-nowrap overflow-ellipsis"
-                                style=
-                                        "color:#FFFFFF;font-family:'Ubuntu', sans-serif;font-weight:700">
-                                Ana Sayfa</h1></a>
+                            <h1 style="display: none;" class="TR heading-small lg:heading-medium overflow-hidden whitespace-nowrap overflow-ellipsis"
+                                style="color:#FFFFFF;font-family:'Ubuntu', sans-serif;font-weight:700">
+                                Ana Sayfa</h1>
+                            <h1 style="display: none;" class="EN heading-small lg:heading-medium overflow-hidden whitespace-nowrap overflow-ellipsis"
+                                style="color:#FFFFFF;font-family:'Ubuntu', sans-serif;font-weight:700">
+                                Home Page</h1></a>
                     </div>
                 </div>
                 <div class="flex justify-end whitespace-nowrap">
@@ -113,12 +116,12 @@
                                      "flex-shrink-0 relative w-full mx-auto aspect-w-16 aspect-h-9">
                 <span style=
                               "box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:absolute;top:0;left:0;bottom:0;right:0">
-                <img alt="We provide high quality services" src=
+                <img alt="A lego developer" src=
                         "fotograflar/legoman.png"
                      decoding="async" data-nimg="fill" class=
                              "rounded-lg md:rounded-xl lg:rounded-2xl" style=
                              "position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;object-fit:cover;object-position:center center"><noscript><img
-                        alt="We provide high quality services"
+                        alt="A lego developer"
                         src="../fotograflar/legoman.png"
                         decoding="async" data-nimg="fill" style=
                                 "position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;object-fit:cover;object-position:center center"
@@ -236,7 +239,13 @@
                                         "color:#FFFFFF;font-family:'Ubuntu', sans-serif;font-weight:700">
                                 İletişim</h3>
                         </div>
-                        <div class="body-normal" style="color:#FFFFFF">
+                        <div style="display: none;" class="EN body-normal" style="color:#FFFFFF">
+                            You can reach me from here: <a href=
+                                                                         "mailto: mustafacagsak1@gmail.com"
+                                                                 class="__cf_email__">
+                            mustafacagsak1@gmail.com</a>
+                        </div>
+                        <div style="display: none;" class="TR body-normal" style="color:#FFFFFF">
                             Bana bu adresten ulaşabilrisiniz: <a href=
                                                                          "mailto: mustafacagsak1@gmail.com"
                                                                  class="__cf_email__">
@@ -291,13 +300,32 @@
                             </li>
                         </ul>
                     </div>
-                    <p class=
-                               "body-normal lg:text-right whitespace-nowrap !text-center">
+                    <p style="display: none;" class=
+                               "TR body-normal lg:text-right whitespace-nowrap !text-center">
                         Durable kullanılarak yapıldı</p>
+                    <p style="display: none;" class=
+                        "EN body-normal lg:text-right whitespace-nowrap !text-center">
+                        Made with Durable</p>
                 </div>
             </div>
         </footer>
     </div>
 </div>
 </body>
+
+<script type="text/javascript">
+    var userLang = navigator.language || navigator.userLanguage; 
+    if(userLang == "tr-TR"){
+        elements = document.getElementsByClassName("TR");
+        for(var i = 0 ; i < elements.length ; i++){
+            elements[i].style.display = "block"
+        }
+    }else{
+        elements = document.getElementsByClassName("EN");
+        for(var i = 0 ; i < elements.length ; i++){
+            elements[i].style.display = "block"
+        }
+    }
+</script>
+
 </html>
