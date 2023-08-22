@@ -83,10 +83,12 @@
                                 style="color:#FFFFFF;font-family:'Ubuntu', sans-serif;font-weight:700">
                                 Home Page</h1></a>
                     </div>
-                </div>
-                <div class="flex justify-end whitespace-nowrap">
-                    <div class="ml-auto lg:hidden">
 
+                    <div class="switch">
+                        <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+                        <label for="language-toggle"></label>
+                        <span class="on">TR</span>
+                        <span class="off">EN</span>
                     </div>
                 </div>
             </div>
@@ -102,12 +104,10 @@
                     <div class=
                                  "flex-1 flex flex-col items-center lg:items-start">
                         <div class="rich-text-block" style="color:#111827">
-                            <h3 style="white-space:pre-line">Merhaba, Ben Mustafa Çağşak</h3>
-                            <p style="white-space:pre-line">Sürekli yeni şeyler öğrenmeye çalışan bir geliştirici ve
-                                aynı zamanda bir üniversite öğrencisiyim. Eğitimime İstanbul Teknik Üniversitesin'de
-                                bilgisayar mühendisliği 1. sınıf öğrencisi olarak devam ediyorum. Aşağıda Android ve
-                                Bilgisayar için yaptığım bazı projeleri inceleyebilir, diğer sosyal medya hesaplarımın
-                                bağlantılarımı kullanarak benimle iletişime geçebilrisiniz :)</p>
+                            <h3 style="display: none;" class="TR" style="white-space:pre-line">Merhaba, Ben Mustafa Çağşak</h3>
+                            <h3 style="display: none;" class="EN" style="white-space:pre-line">HI, I'm Mustafa Çağşak</h3>
+                            <p style="display: none;" class="TR"  style="white-space:pre-line">Sürekli yeni şeyler öğrenmeye çalışan bir geliştirici ve aynı zamanda bir üniversite öğrencisiyim. Eğitimime İstanbul Teknik Üniversitesin'de bilgisayar mühendisliği 1. sınıf öğrencisi olarak devam ediyorum. Aşağıda Android ve Bilgisayar için yaptığım bazı projeleri inceleyebilir, diğer sosyal medya hesaplarımın bağlantılarımı kullanarak benimle iletişime geçebilrisiniz :)</p>
+                            <p style="display: none;" class="EN" >I am a developer who always trying to learn something new and also a university student. I am curently at ITU (Istanbul Technical University) and I continue as a 1st year student of computer engineering. You can review some of my projects for the Android and the PC, and also contact me using the social media links :) </p>
                         </div>
                     </div>
                     <div class=
@@ -143,9 +143,16 @@
                          "background-color:#FA7800;min-height:calc(240px - 0px)">
             <div class=
                          "container mx-auto relative z-10 pt-8 lg:pt-12 pb-8 lg:pb-12">
-                <h2 class="heading-large mb-6 text-left" style=
-                        "color:#FFFFFF;font-family:'Ubuntu', sans-serif;font-weight:700">
-                    Projelerim</h2>
+                <div style="display: none;" class="TR"  >
+                    <h2 class="heading-large mb-6 text-left" style=
+                    "color:#FFFFFF;font-family:'Ubuntu', sans-serif;font-weight:700">
+                Projelerim</h2>
+                </div>
+                <div style="display: none;" class="EN"  >
+                    <h2 class="heading-large mb-6 text-left" style=
+                    "color:#FFFFFF;font-family:'Ubuntu', sans-serif;font-weight:700">
+                My Projects</h2>
+                </div>
                 <div class=
                              "flex flex-col sm:flex-row flex-wrap gap-10 justify-start">
                     <div class="block-list-item w-full">
@@ -171,14 +178,23 @@
                                     "color:#FFFFFF;font-family:'Ubuntu', sans-serif;font-weight:700">
                                 Word Master</p>
                             <div class="rich-text-block" style="color:#FFFFFF">
-                                <p>Android üzerine geliştirdiğim bir kelime oyunu. En yakın zamanda Google Play Store
-                                    üzerinden oynayabileceksiniz.</p>
+                                <p style="display: none;" class="TR">Android üzerine geliştirdiğim bir kelime oyunu. Google Play Store üzerinden indirip oynayabilirsiniz.</p>
+                                <p style="display: none;" class="EN">A word game developed for android. You can download from Google Play Store now.</p>
                             </div>
-                            <a class="button primary lg mt-4" target=
-                                    "_self" style=
-                                       "background:transparent;border-radius:8px;color:#ffffff;border:2px solid #ffffff"
-                               href=
-                                       "sayfalar/word-master.html">Daha Fazla...</a>
+                            <div style="display: none;" class="TR"> 
+                                <a class="button primary lg mt-4" target=
+                                "_self" style=
+                                   "background:transparent;border-radius:8px;color:#ffffff;border:2px solid #ffffff"
+                           href=
+                                   "sayfalar/word-master.html">Daha Fazla...</a>
+                            </div>
+                            <div style="display: none;" class="EN"> 
+                                <a class="button primary lg mt-4" target=
+                                "_self" style=
+                                   "background:transparent;border-radius:8px;color:#ffffff;border:2px solid #ffffff"
+                           href=
+                                   "sayfalar/word-master.html">See More...</a>
+                            </div>
                         </div>
                     </div>
                     <div class="block-list-item w-full">
@@ -204,15 +220,23 @@
                                     "color:#FFFFFF;font-family:'Ubuntu', sans-serif;font-weight:700">
                                 Box Game</p>
                             <div class="rich-text-block" style="color:#FFFFFF">
-                                <p>İlk Unity oyunum. birbirinden farklı 10 level
-                                    ve 2 farklı oyun modu içeriyor. Bilgisayar veya
-                                    Web üzerinden oynayabilirsiniz.</p>
+                                <p style="display: none;" class="TR">İlk Unity oyunum. birbirinden farklı 10 level ve 2 farklı oyun modu içeriyor. Bilgisayar veya Web üzerinden oynayabilirsiniz.</p>
+                                <p style="display: none;" class="EN">My fisrt Unity game. There is 10 different levels and 2 game modes. You can play the game from the Web or the PC.</p>
                             </div>
-                            <a class="button primary lg mt-4" target=
-                                    "_blank" style=
-                                       "background:transparent;border-radius:8px;color:#ffffff;border:2px solid #ffffff"
-                               href="https://cagsak.itch.io/box-game">Şimdi
-                                Oyna!</a>
+                            <div style="display: none;" class="TR" >
+                                <a class="button primary lg mt-4" target=
+                                "_blank" style=
+                                   "background:transparent;border-radius:8px;color:#ffffff;border:2px solid #ffffff"
+                           href="https://cagsak.itch.io/box-game">Şimdi
+                            Oyna!</a>
+                            </div>
+
+                            <div style="display: none;" class="EN" >
+                                <a class="button primary lg mt-4" target=
+                                "_blank" style=
+                                   "background:transparent;border-radius:8px;color:#ffffff;border:2px solid #ffffff"
+                           href="https://cagsak.itch.io/box-game">Play Now!</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -233,11 +257,16 @@
                              "flex flex-col justify-center gap-12 text-center">
                     <div class="flex flex-col items-center gap-6">
                         <div class="max-w-full overflow-hidden grid">
-                            <h3 class=
+                            <h3 style="display: none;" class="TR" class=
                                         "heading-medium overflow-hidden whitespace-nowrap overflow-ellipsis xl:heading-small"
                                 style=
                                         "color:#FFFFFF;font-family:'Ubuntu', sans-serif;font-weight:700">
                                 İletişim</h3>
+                            <h3 style="display: none;" class="EN" class=
+                                        "heading-medium overflow-hidden whitespace-nowrap overflow-ellipsis xl:heading-small"
+                                style=
+                                        "color:#FFFFFF;font-family:'Ubuntu', sans-serif;font-weight:700">
+                                Contact Me</h3>
                         </div>
                         <div style="display: none;" class="EN body-normal" style="color:#FFFFFF">
                             You can reach me from here: <a href=
@@ -314,18 +343,47 @@
 </body>
 
 <script type="text/javascript">
-    var userLang = navigator.language || navigator.userLanguage; 
-    if(userLang == "tr-TR"){
+
+    function tr(){
         elements = document.getElementsByClassName("TR");
         for(var i = 0 ; i < elements.length ; i++){
             elements[i].style.display = "block"
         }
-    }else{
+        elements = document.getElementsByClassName("EN");
+        for(var i = 0 ; i < elements.length ; i++){
+            elements[i].style.display = "none"
+        }
+        document.getElementsByTagName("html")[0].lang = "tr-TR";
+    }
+
+    function en(){
         elements = document.getElementsByClassName("EN");
         for(var i = 0 ; i < elements.length ; i++){
             elements[i].style.display = "block"
         }
+        elements = document.getElementsByClassName("TR");
+        for(var i = 0 ; i < elements.length ; i++){
+            elements[i].style.display = "none"
+        }
+        document.getElementsByTagName("html")[0].lang = "en-US";
     }
+
+    var userLang = navigator.language || navigator.userLanguage; 
+    if(userLang == "tr-TR"){
+        tr();
+        document.getElementsByClassName("check-toggle")[0].checked = false;
+    }else{
+        en();
+        document.getElementsByClassName("check-toggle")[0].checked = true;
+    }
+
+    document.getElementsByClassName('check-toggle')[0].addEventListener('change', (event) => {
+      if (event.currentTarget.checked) {
+        en();
+      } else {
+        tr();
+      }
+    })
 </script>
 
 </html>
