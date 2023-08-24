@@ -117,7 +117,7 @@ body {
     width: 100%;
     overflow: hidden;
     line-height: 0;
-    transform: rotate(180deg);
+    transform: scaleY(1.05);
 }
 
 .wave1 svg {
@@ -125,13 +125,14 @@ body {
     display: block;
     width: calc(100% + 1.3px);
     height: 100px;
+    transform: rotate(180deg);
 }
 
 .wave2 {
     width: 100%;
     overflow: hidden;
     line-height: 0;
-    transform: rotate(180deg);
+    transform: scaleY(1.05);
 }
 
 .wave2 svg {
@@ -139,6 +140,7 @@ body {
     display: block;
     width: calc(100% + 1.3px);
     height: 60px;
+    transform: rotate(180deg);
 }
 
 hr {
