@@ -6,6 +6,10 @@ html {
     -webkit-text-size-adjust: 100%
 }
 
+h2, h3 {
+    font-family: 'Varela Round', sans-serif !important;
+}
+
 .switch {
     position: relative;
     display: inline-block;
