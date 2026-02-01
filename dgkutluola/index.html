@@ -243,7 +243,8 @@
         const PHOTO_SETTINGS = [
             { file: 'foto1.png', name: 'DOĞUM GÜNÜN KUTLU OLSUN MERVE', winMusic: 'win1.mp3' },
             { file: 'foto2.png', name: 'DOĞUM GÜNÜN KUTLU OLSUN EMİRHAN', winMusic: 'win2.mp3' },
-            { file: 'foto3.png', name: 'DOĞUM GÜNÜN KUTLU OLSUN DENİZ', winMusic: 'win3.mp3' }
+            { file: 'foto3.png', name: 'DOĞUM GÜNÜN KUTLU OLSUN DENİZ', winMusic: 'win3.mp3' },
+            { file: 'foto4.png', name: 'DOĞUM GÜNÜN KUTLU OLSUN MUSTAFA', winMusic: 'win4.mp3' }
         ];
 
         // Savaş müziği dosya adı (dgkutluola klasörüne koy)
@@ -762,17 +763,15 @@
 
             const ballColors = [
                 { c1: color(233, 69, 96), c2: color(199, 62, 84) },
-                { c1: color(78, 205, 196), c2: color(61, 185, 177) },
-                { c1: color(255, 230, 109), c2: color(230, 207, 98) }
             ];
 
-            for (let i = 0; i < 3; i++) {
+            for (let i = 0; i < PHOTO_SETTINGS.length; i++) {
                 boxes.push(new Ball(
                     random(ballSize + 50, width - ballSize - 50),
                     random(HEADER_HEIGHT + ballSize + 50, height - ballSize - 50),
                     ballSize,
-                    ballColors[i].c1,
-                    ballColors[i].c2,
+                    ballColors[0].c1,
+                    ballColors[0].c2,
                     photos[i],
                     PHOTO_SETTINGS[i].name,
                     1.0,
@@ -859,6 +858,12 @@
                 let aliveBalls = boxes.filter(b => b.alive);
                 if (aliveBalls.length === 1) {
                     showWinner(aliveBalls[0]);
+                } else if (aliveBalls.length === 0) {
+                    // Herkes öldü! En son hasar alan (en geç ölen) kazansın
+                    let lastToDie = boxes.reduce((prev, curr) =>
+                        prev.lastDamageTime > curr.lastDamageTime ? prev : curr
+                    );
+                    showWinner(lastToDie);
                 }
             }
 
