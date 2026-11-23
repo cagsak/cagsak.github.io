@@ -3,20 +3,26 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../fotograflar/hacker.ico">
     <title>Box Game</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="canonical" href="../index.html">
     <link rel="preload" href="../index.css" as="style">
     <link rel="stylesheet" href="../index.css" data-n-g="">
     <link href='https://fonts.googleapis.com/css?family=Bungee' rel='stylesheet'>
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Varela+Round:wght@400&family=PT+Sans:wght@400&display=swap" />
+        href="https://fonts.googleapis.com/css2?family=Varela+Round:wght@400&family=Open+Sans:wght@400;600;700&display=swap" />
     <link rel="stylesheet"
         data-href="https://fonts.googleapis.com/css2?family=Varela+Round:wght@400&amp;family=PT+Sans:wght@400&amp;display=swap"
         data-optimized-fonts="true" />
+    <style id="polish">
+        a:focus-visible, label:focus-visible, input:focus-visible + label { outline: 3px solid #111827; outline-offset: 3px; border-radius: 6px; }
+        #website-header a:focus-visible, #website-footer a:focus-visible, #list-1 a:focus-visible { outline-color: #FFFFFF; }
+        .check-toggle:focus-visible + label { outline: 3px solid #FFFFFF; outline-offset: 3px; }
+        body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+    </style>
 </head>
 
 <body>
@@ -199,16 +205,16 @@
                                     style="color:#FFFFFF;font-family:Varela Round, sans-serif;font-weight:400">
                                     İletişim</h3>
                                 <h3 style="display: none;" class="EN" class="heading-medium overflow-hidden whitespace-nowrap overflow-ellipsis xl:heading-small"
-                                style="color:#FFFFFF;font-family:'Ubuntu', sans-serif;font-weight:700">
+                                style="color:#FFFFFF;font-family:'Varela Round', sans-serif;font-weight:700">
                                 Contact Me</h3>
                             </div>
                             <div style="display: none;" class="EN body-normal" style="color:#FFFFFF">
-                                You can reach me from here: <a href="mailto: mustafacagsak1@gmail.com"
+                                You can reach me from here: <a href="mailto:mustafacagsak1@gmail.com"
                                     class="__cf_email__">
                                     mustafacagsak1@gmail.com</a>
                             </div>
                             <div style="display: none;" class="TR body-normal" style="color:#FFFFFF">
-                                Bana bu adresten ulaşabilrisiniz: <a href="mailto: mustafacagsak1@gmail.com"
+                                Bana bu adresten ulaşabilirsiniz: <a href="mailto:mustafacagsak1@gmail.com"
                                     class="__cf_email__">
                                     mustafacagsak1@gmail.com</a>
                             </div>
@@ -298,7 +304,7 @@
     }
 
     var userLang = navigator.language || navigator.userLanguage;
-    if (userLang == "tr-TR") {
+    if (userLang && userLang.toLowerCase().indexOf("tr") === 0) {
         tr();
         document.getElementsByClassName("check-toggle")[0].checked = false;
     } else {
