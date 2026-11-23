@@ -3,20 +3,58 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../fotograflar/hacker.ico">
-    <title>Box Game</title>
+    <title>Box Game — Mustafa Çağşak</title>
+    <meta name="description" content="Box Game: Mustafa Çağşak'ın ilk Unity oyunu. 10 bölüm, sonsuz mod ve iki kişilik mod. Tarayıcıda oyna ya da Windows, Mac ve Linux için indir.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="canonical" href="../index.html">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="canonical" href="https://cagsak.github.io/sayfalar/box-game.html">
     <link rel="preload" href="../index.css" as="style">
     <link rel="stylesheet" href="../index.css" data-n-g="">
-    <link href='https://fonts.googleapis.com/css?family=Bungee' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&display=swap">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Varela+Round:wght@400&family=PT+Sans:wght@400&display=swap" />
+        href="https://fonts.googleapis.com/css2?family=Varela+Round:wght@400&family=Open+Sans:wght@400;600;700&display=swap" />
     <link rel="stylesheet"
         data-href="https://fonts.googleapis.com/css2?family=Varela+Round:wght@400&amp;family=PT+Sans:wght@400&amp;display=swap"
         data-optimized-fonts="true" />
+    <style id="polish">
+        a:focus-visible, label:focus-visible, input:focus-visible + label { outline: 3px solid #111827; outline-offset: 3px; border-radius: 6px; }
+        #website-header a:focus-visible, #website-footer a:focus-visible, #list-1 a:focus-visible { outline-color: #FFFFFF; }
+        .check-toggle:focus-visible + label { outline: 3px solid #FFFFFF; outline-offset: 3px; }
+        body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+    </style>
+    <style id="boxgame">
+        html { scroll-behavior: smooth; }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+        .bg-info { max-width: 34rem; font-size: 17px; line-height: 1.65; }
+        .bg-title { font-family: 'Bungee', 'Varela Round', sans-serif !important; font-size: clamp(28px, 4vw, 40px); line-height: 1.1; margin: 0 0 16px; color: #2b2b2b; }
+        .bg-lead { margin: 0 0 24px; color: #4b4b4b; }
+        .bg-features { list-style: none; margin: 0 0 28px; padding: 0; display: grid; gap: 10px; }
+        .bg-features li { display: flex; flex-direction: column; padding: 12px 16px; border-left: 4px solid #fb4b4b; background: #fff1f1; border-radius: 0 10px 10px 0; }
+        .bg-features strong { font-family: 'Varela Round', sans-serif; font-weight: 400; font-size: 18px; color: #2b2b2b; }
+        .bg-features span { color: #6b6b6b; font-size: 15px; }
+        .bg-subtitle { font-family: 'Varela Round', sans-serif !important; font-size: 20px; margin: 28px 0 12px; color: #2b2b2b; }
+        .bg-actions a[style*="block"] { display: inline-flex !important; }
+        .bg-features[style*="block"] { display: grid !important; }
+        .bg-info p { line-height: 1.65 !important; }
+        .bg-actions, .bg-downloads { display: flex; flex-wrap: wrap; gap: 12px; }
+        .bg-btn { display: inline-flex; align-items: baseline; gap: 8px; padding: 10px 18px; border-radius: 8px; border: 2px solid #2b2b2b; color: #2b2b2b; background: transparent; font-family: 'Varela Round', sans-serif; font-size: 16px; text-decoration: none; cursor: pointer; transition: background-color .15s, color .15s; }
+        .bg-btn span { font-family: 'Open Sans', sans-serif; font-size: 13px; opacity: .7; }
+        .bg-btn:hover { background: #2b2b2b; color: #fff; }
+        .bg-btn-primary { background: #fb4b4b; border-color: #fb4b4b; color: #fff; font-size: 18px; padding: 12px 24px; }
+        .bg-btn-primary:hover { background: #c73b3b; border-color: #c73b3b; }
+        .bg-btn-light { border-color: #fff; color: #fff; }
+        .bg-btn-light:hover { background: #fff; color: #c73b3b; }
+        .bg-note { margin: 14px 0 0; font-size: 14px; color: #6b6b6b; }
+        .bg-play-title { font-family: 'Bungee', 'Varela Round', sans-serif !important; color: #fff; font-size: clamp(24px, 3.5vw, 34px); margin: 0 0 20px; text-align: center; }
+        .bg-frame { width: 100%; max-width: 960px; margin: 0 auto; aspect-ratio: 3 / 2; border-radius: 16px; overflow: hidden; background: #c73b3b; box-shadow: 0 0 0 4px rgba(255,255,255,.25); }
+        .bg-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+        .bg-play-bar { max-width: 960px; margin: 16px auto 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; color: #fff; }
+        .bg-play-bar p { margin: 0; font-size: 15px; opacity: .9; }
+        .bg-btn:focus-visible { outline: 3px solid #2b2b2b; outline-offset: 3px; }
+        .bg-btn-light:focus-visible { outline-color: #fff; }
+    </style>
 </head>
 
 <body>
@@ -118,43 +156,38 @@
                 <div class="container mx-auto relative z-10 pt-12 lg:pt-14 xl:pt-20 pb-12 lg:pb-14 xl:pb-20">
                     <div class="flex flex-col lg:flex-row w-full gap-10 lg:gap-20 items-center lg:!flex-row-reverse">
                         <div class="flex-1 flex flex-col items-center lg:items-start">
-                            <div class="rich-text-block" style="color:#2b2b2b">
-                                <h2 class="EN" style="text-align: center; font-family: Bungee !important;font-size: 38px;">WELCOME TO BOX GAME</h2>
-                                <h2 class="TR" style="text-align: center; font-family: Bungee !important;font-size: 38px;">BOX GAME'E HOŞGELDİN</h2>
-                                
-                                <h4 class="EN">Contents:</h4>
-                                <h4 class="TR">Oyun İçeriği:</h4>
+                            <div class="bg-info" style="color:#2b2b2b">
+                                <h2 style="display: none;" class="TR bg-title">Box Game'e hoş geldin</h2>
+                                <h2 style="display: none;" class="EN bg-title">Welcome to Box Game</h2>
 
-                                <ul class="EN" style="gap: 0rem;">
-                                    <li style="margin-bottom: 0;">10 difficult levels</li>
-                                    <li style="margin-bottom: 0;">Infinity mode</li>
-                                    <li style="margin-bottom: 0;">Versus mode</li>
+                                <p style="display: none;" class="TR bg-lead">İlk Unity oyunum. Unity'nin temellerini Brackeys'in YouTube derslerinden öğrenirken geliştirdim. Kutuyu engellere çarpmadan bitiş çizgisine ulaştır.</p>
+                                <p style="display: none;" class="EN bg-lead">My first Unity game. I built it while learning the basics of Unity from Brackeys' YouTube tutorials. Guide the box to the finish line without hitting the obstacles.</p>
+
+                                <ul style="display: none;" class="TR bg-features">
+                                    <li><strong>10 bölüm</strong><span>Her biri farklı engellerle</span></li>
+                                    <li><strong>Sonsuz mod</strong><span>Ne kadar uzağa gidebilirsin?</span></li>
+                                    <li><strong>İki kişilik mod</strong><span>Arkadaşınla karşı karşıya</span></li>
                                 </ul>
-                                <ul class="TR" style="gap: 0rem;">
-                                    <li style="margin-bottom: 0;">Birbirinden farklı 10 bölüm</li>
-                                    <li style="margin-bottom: 0;">Sonsuz mod</li>
-                                    <li style="margin-bottom: 0;">İki kişilik mod</li>
+                                <ul style="display: none;" class="EN bg-features">
+                                    <li><strong>10 levels</strong><span>Each with different obstacles</span></li>
+                                    <li><strong>Endless mode</strong><span>How far can you go?</span></li>
+                                    <li><strong>Versus mode</strong><span>Go head to head with a friend</span></li>
                                 </ul>
 
-                                <p class="EN">Note: You can play on web of course but for the better performance please download the game from the links below.</p>
-                                <p class="TR">Not: Web üzerinden oynanılabilir olmasına rağmen daha iyi performans için aşağıdaki linkler üzerinden oyunu indir.</p>
-
-                                <p class="EN">This is my first game made with unity. I learned unity basics with Unity Beginner Tutorials by Brackeys and i develop rest of it by myself.</p>
-                                <p class="TR">Bu benim ilk Unity oyunum. Unity temellerini Brackeys youtube kanalı ile öğrenirken bu oyunu geliştirdim.</p>
-                                
-                                <h4 class="EN">Enjoy the game :)</h4>
-                                <h4 class="TR">İyi oyunlar :)</h4>
-
-                                <br>
-
-                                <h4 class="EN" style="text-align: center; font-family:Georgia, 'Times New Roman', Times, serif;">Download links:</h4>
-                                <h4 class="TR" style="text-align: center; font-family:Georgia, 'Times New Roman', Times, serif;">İndirme linkleri:</h4>
-
-                                <div style="display: flex;justify-content: space-around;">
-                                    <a class="button primary lg mt-4" style="background:transparent;border-radius:8px;color:#2b2b2b;border:2px solid #2b2b2b;text-decoration: none;font-family:Varela Round, sans-serif;font-weight:600" href="../dosyalar/Box Game.exe">Windows</a>
-                                    <a class="button primary lg mt-4" style="background:transparent;border-radius:8px;color:#2b2b2b;border:2px solid #2b2b2b;text-decoration: none;font-family:Varela Round, sans-serif;font-weight:600" href="../dosyalar/box game_mac.rar">Mac</a>
-                                    <a class="button primary lg mt-4" style="background:transparent;border-radius:8px;color:#2b2b2b;border:2px solid #2b2b2b;text-decoration: none;font-family:Varela Round, sans-serif;font-weight:600" href="../dosyalar/box game_linux.rar">Linux</a>
+                                <div class="bg-actions">
+                                    <a style="display: none;" class="TR bg-btn bg-btn-primary" href="#oyna">Tarayıcıda oyna</a>
+                                    <a style="display: none;" class="EN bg-btn bg-btn-primary" href="#oyna">Play in browser</a>
                                 </div>
+
+                                <h3 style="display: none;" class="TR bg-subtitle">İndir</h3>
+                                <h3 style="display: none;" class="EN bg-subtitle">Download</h3>
+                                <div class="bg-downloads">
+                                    <a class="bg-btn" href="../dosyalar/Box%20Game.exe" download>Windows <span>.exe · 65 MB</span></a>
+                                    <a class="bg-btn" href="../dosyalar/box%20game_mac.rar" download>macOS <span>.rar · 19 MB</span></a>
+                                    <a class="bg-btn" href="../dosyalar/box%20game_linux.rar" download>Linux <span>.rar · 21 MB</span></a>
+                                </div>
+                                <p style="display: none;" class="TR bg-note">Oyun tarayıcıda da çalışıyor, ama indirilen sürüm daha akıcı.</p>
+                                <p style="display: none;" class="EN bg-note">The game runs in the browser too, but the downloaded version runs smoother.</p>
                             </div>
                         </div>
                         <div class="flex-1 flex w-full justify-center lg:justify-start lg:!justify-end">
@@ -172,18 +205,22 @@
                 </div>
             </section>
 
-            <section id="hero-1" class="flex flex-none flex-shrink-0 relative z-10 items-center"
+            <section id="oyna" class="flex flex-none flex-shrink-0 relative z-10 items-center"
                 style="background-color:#fb4b4b;min-height:240px">
                 <div class="container mx-auto relative z-10 pt-12 lg:pt-14 xl:pt-20 pb-12 lg:pb-14 xl:pb-20">
 
-                    <div class="html_embed_widget base_widget embed_wrapper" id="html_embed_3237965">
-                        <div class="game_frame game_pending" style="height: 640px" data-height="640" data-width="960">
-                            <iframe src="https://html-classic.itch.zone/html/9352567/box game_web/index.html"
-                                id="game_drop" scrolling="no" frameborder="0"
-                                allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated"
-                                allowtransparency="true" style="width: 100%; height: 100%;align-self: center;"></iframe>
-
-                        </div>
+                    <h2 style="display: none;" class="TR bg-play-title">Tarayıcıda oyna</h2>
+                    <h2 style="display: none;" class="EN bg-play-title">Play in your browser</h2>
+                    <div class="bg-frame">
+                        <iframe src="https://html-classic.itch.zone/html/9352567/box game_web/index.html"
+                            id="game_drop" title="Box Game" scrolling="no" frameborder="0" loading="lazy"
+                            allow="autoplay; fullscreen *; gamepad"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="bg-play-bar">
+                        <p style="display: none;" class="TR">Oyun yüklenmezse sayfayı yenile. Telefonda değil, bilgisayarda oynaman önerilir.</p>
+                        <p style="display: none;" class="EN">If the game doesn't load, refresh the page. Best played on a computer, not a phone.</p>
+                        <button type="button" class="bg-btn bg-btn-light" id="fullscreen-btn"><span style="display: none;" class="TR">Tam ekran</span><span style="display: none;" class="EN">Fullscreen</span></button>
                     </div>
                 </div>
             </section>
@@ -199,16 +236,16 @@
                                     style="color:#FFFFFF;font-family:Varela Round, sans-serif;font-weight:400">
                                     İletişim</h3>
                                 <h3 style="display: none;" class="EN" class="heading-medium overflow-hidden whitespace-nowrap overflow-ellipsis xl:heading-small"
-                                style="color:#FFFFFF;font-family:'Ubuntu', sans-serif;font-weight:700">
+                                style="color:#FFFFFF;font-family:'Varela Round', sans-serif;font-weight:700">
                                 Contact Me</h3>
                             </div>
                             <div style="display: none;" class="EN body-normal" style="color:#FFFFFF">
-                                You can reach me from here: <a href="mailto: mustafacagsak1@gmail.com"
+                                You can reach me from here: <a href="mailto:mustafacagsak1@gmail.com"
                                     class="__cf_email__">
                                     mustafacagsak1@gmail.com</a>
                             </div>
                             <div style="display: none;" class="TR body-normal" style="color:#FFFFFF">
-                                Bana bu adresten ulaşabilrisiniz: <a href="mailto: mustafacagsak1@gmail.com"
+                                Bana bu adresten ulaşabilirsiniz: <a href="mailto:mustafacagsak1@gmail.com"
                                     class="__cf_email__">
                                     mustafacagsak1@gmail.com</a>
                             </div>
@@ -259,11 +296,6 @@
                                 </li>
                             </ul>
                         </div>
-                        <p style="display: none;" class="TR"
-                            class="body-normal lg:text-right whitespace-nowrap !text-center">Durable kullanılarak
-                            yapıldı</p>
-                        <p style="display: none;" class="EN"
-                            class="body-normal lg:text-right whitespace-nowrap !text-center">Made with Durable</p>
                     </div>
                 </div>
             </footer>
@@ -298,7 +330,7 @@
     }
 
     var userLang = navigator.language || navigator.userLanguage;
-    if (userLang == "tr-TR") {
+    if (userLang && userLang.toLowerCase().indexOf("tr") === 0) {
         tr();
         document.getElementsByClassName("check-toggle")[0].checked = false;
     } else {
@@ -313,6 +345,14 @@
             tr();
         }
     })
+
+    var fsBtn = document.getElementById('fullscreen-btn');
+    var frame = document.getElementById('game_drop');
+    if (fsBtn && frame && frame.requestFullscreen) {
+        fsBtn.addEventListener('click', function () { frame.requestFullscreen().catch(function () {}); });
+    } else if (fsBtn) {
+        fsBtn.hidden = true;
+    }
 </script>
 
 </html>

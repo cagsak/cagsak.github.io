@@ -2,19 +2,25 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="fotograflar/hacker.ico">
     <title>Mustafa Çağşak</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta name="google-site-verification" content="QuW0dfC8fmYQkyDp2nbgLz9lJqwxPMYLq9TdijoEcFo"/>
     <meta name="description" content="Mustafa Çağşak — İTÜ Bilgisayar Mühendisliği öğrencisi; TÜBİTAK BİLGEM UEKAE Aday Araştırmacı ve İTÜ Güneş Arabası Ekibi Gömülü Sistemler Grubu Sorumlusu.">
     <meta name="title" content="Mustafa Çağşak - Embedded Systems Engineer and Computer Engineering Student">
     <link rel="preload" href="index.css" as="style">
     <link rel="stylesheet" href="index.css" data-n-g="">
     <link rel="canonical" href="https://cagsak.github.io/">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Varela+Round:wght@400&family=PT+Sans:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Varela+Round:wght@400&family=Open+Sans:wght@400;600;700&display=swap" />
     <link rel="stylesheet" data-href="https://fonts.googleapis.com/css2?family=Varela+Round:wght@400&amp;family=PT+Sans:wght@400&amp;display=swap" data-optimized-fonts="true" />
+    <style id="polish">
+        a:focus-visible, label:focus-visible, input:focus-visible + label { outline: 3px solid #111827; outline-offset: 3px; border-radius: 6px; }
+        #website-header a:focus-visible, #website-footer a:focus-visible, #list-1 a:focus-visible { outline-color: #FFFFFF; }
+        .check-toggle:focus-visible + label { outline: 3px solid #FFFFFF; outline-offset: 3px; }
+        body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+    </style>
 </head>
 <body>
 <div id="__next" data-reactroot="">
@@ -160,23 +166,42 @@
                 "flex flex-none flex-shrink-0 relative z-10 items-center"
                  style="background-color:#FFFFFF">
             <style>
-    #cv .cv-entry { border-left: 4px solid #FA7800; padding: 4px 0 4px 20px; margin-bottom: 32px; }
-    #cv .cv-org { font-weight: 700; font-size: 1.15rem; line-height: 1.5; margin-bottom: 6px; }
-    #cv .cv-sub { font-weight: 400; color: #6B7280; }
+    #cv > .container > * { max-width: 860px; }
+    #cv h2 { margin-top: 44px; margin-bottom: 24px !important; font-size: 2rem !important; line-height: 1.25 !important; }
+    @media (max-width: 639px) {
+        #cv .cv-row[style*="block"] { flex-direction: column; }
+        #cv .cv-row + .cv-row, #cv .cv-row ~ .cv-row { margin-top: 2px; }
+        #cv h2 { font-size: 1.75rem !important; margin-top: 36px; }
+    }
+    #cv > .container > div:nth-child(-n+2) h2 { margin-top: 8px; }
+    #cv .cv-entry { border-left: 3px solid #FA7800; padding: 2px 0 2px 22px; margin-bottom: 36px; }
+    #cv .cv-entry:last-child { margin-bottom: 0; }
+    #cv .cv-org { font-family: 'Varela Round', sans-serif; font-size: 1.2rem; line-height: 1.4; margin-bottom: 8px; color: #111827; }
+    #cv .cv-sub { font-family: 'Open Sans', sans-serif; font-size: 1rem; color: #6B7280; }
     #cv .cv-row[style*="block"] { display: flex !important; }
-    #cv .cv-row { justify-content: space-between; flex-wrap: wrap; column-gap: 16px; }
-    #cv .cv-role { font-weight: 600; }
-    #cv .cv-date { color: #6B7280; white-space: nowrap; }
-    #cv .rich-text-block ul { margin: .5rem 0 0; padding-left: 22px; }
-    #cv .rich-text-block li { margin-bottom: 0; }
-    #cv .rich-text-block p { margin-bottom: 0; }
-    #cv a { color: #FF4500; text-decoration: underline; word-break: break-all; }
-    #cv h2 { margin-top: 16px; }
+    #cv .cv-row { justify-content: space-between; align-items: baseline; flex-wrap: wrap; column-gap: 24px; line-height: 1.6; }
+    #cv .cv-role { font-weight: 600; color: #1F2937; }
+    #cv .cv-date { color: #6B7280; white-space: nowrap; font-size: .95rem; font-variant-numeric: tabular-nums; }
+    #cv .rich-text-block ul { margin: .75rem 0 0; padding-left: 20px; gap: .4rem; }
+    #cv .rich-text-block li { margin-bottom: 0; color: #374151; line-height: 1.6; }
+    #cv .rich-text-block li::marker { color: #FA7800; }
+    #cv .rich-text-block p { margin-bottom: 0; color: #374151; line-height: 1.7; }
+    #cv .races-intro p { color: #4B5563; margin: -8px 0 20px; line-height: 1.6; }
+    #cv ol.races { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    #cv .race { display: flex; flex-direction: column; gap: 2px; padding: 18px 20px; border-radius: 12px; background: #FFF4EB; border-top: 4px solid #FA7800; }
+    #cv .race.has-img { padding-top: 0; overflow: hidden; border-top: 0; }
+    #cv .race-img { display: block; width: calc(100% + 40px); max-width: none; margin: 0 -20px 16px; aspect-ratio: 16 / 9; object-fit: cover; border-bottom: 4px solid #FA7800; }
+    #cv .race-year { font-family: 'Varela Round', sans-serif; font-size: 2rem; line-height: 1.1; color: #C2410C; font-variant-numeric: tabular-nums; margin-bottom: 6px; }
+    #cv .race-name { font-family: 'Varela Round', sans-serif; font-size: 1.1rem; color: #111827; line-height: 1.35; }
+    #cv .race-desc { color: #6B7280; font-size: .95rem; }
+    #cv .race-role { color: #1F2937; font-weight: 600; font-size: .95rem; margin-top: auto; padding-top: 10px; }
+    @media (max-width: 767px) { #cv ol.races { grid-template-columns: 1fr; } }
+    #cv a { color: #C2410C; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
 </style>
 
             <div class="container mx-auto relative z-10 pt-8 pb-12" style="color:#111827">
-<div style="display: none;" class="TR"><h2 class="heading-large mb-6 text-left" style="color:#111827;font-family:'Ubuntu', sans-serif;font-weight:700">Deneyim</h2></div>
-<div style="display: none;" class="EN"><h2 class="heading-large mb-6 text-left" style="color:#111827;font-family:'Ubuntu', sans-serif;font-weight:700">Experience</h2></div>
+<div style="display: none;" class="TR"><h2 class="heading-large mb-6 text-left" style="color:#111827;font-family:'Varela Round', sans-serif;font-weight:700">Deneyim</h2></div>
+<div style="display: none;" class="EN"><h2 class="heading-large mb-6 text-left" style="color:#111827;font-family:'Varela Round', sans-serif;font-weight:700">Experience</h2></div>
 <div class="cv-entry">
 <p class="cv-org">TÜBİTAK BİLGEM UEKAE</p>
 <div style="display: none;" class="TR cv-row"><span class="cv-role">Aday Araştırmacı</span><span class="cv-date">Temmuz 2026 – Günümüz</span></div>
@@ -202,8 +227,14 @@
 <div style="display: none;" class="TR rich-text-block"><ul><li>Gerçek zamanlı gömülü yazılım geliştirme (C/C++, STM32, FreeRTOS).</li><li>Haberleşme protokolleri (CAN-BUS, SPI, UART...) ve güvenilir veri aktarım çözümleri.</li><li>Gerçek zamanlı sistemler için simülasyon destekli yazılım geliştirme ve test süreçleri.</li></ul></div>
 <div style="display: none;" class="EN rich-text-block"><ul><li>Real-time embedded software development (C/C++, STM32, FreeRTOS).</li><li>Communication protocols (CAN-BUS, SPI, UART...) and reliable data transfer solutions.</li><li>Simulation-assisted software development and testing for real-time systems.</li></ul></div>
 </div>
-<div style="display: none;" class="TR"><h2 class="heading-large mb-6 text-left" style="color:#111827;font-family:'Ubuntu', sans-serif;font-weight:700">Eğitim</h2></div>
-<div style="display: none;" class="EN"><h2 class="heading-large mb-6 text-left" style="color:#111827;font-family:'Ubuntu', sans-serif;font-weight:700">Education</h2></div>
+<div style="display: none;" class="TR"><h2 class="heading-large mb-6 text-left" style="color:#111827;font-family:'Varela Round', sans-serif;font-weight:700">Yarışlar</h2></div>
+<div style="display: none;" class="EN"><h2 class="heading-large mb-6 text-left" style="color:#111827;font-family:'Varela Round', sans-serif;font-weight:700">Races</h2></div>
+<div style="display: none;" class="TR races-intro"><p>İTÜ Güneş Arabası Ekibi ile katıldığım uluslararası yarışlar.</p></div>
+<div style="display: none;" class="EN races-intro"><p>International races I competed in with the ITU Solar Car Team.</p></div>
+<div style="display: none;" class="TR"><ol class="races"><li class="race has-img"><img class="race-img" src="fotograflar/yarislar/gunes-arabasi.svg" alt="Güneş arabası çizimi (geçici görsel)" width="640" height="360" loading="lazy"><span class="race-year">2024</span><span class="race-name">iLumen European Solar Challenge</span><span class="race-desc">Avrupa Güneş Arabası Yarışı</span><span class="race-role">Gömülü Sistemler Grubu Üyesi</span></li><li class="race has-img"><img class="race-img" src="fotograflar/yarislar/eko-arac.svg" alt="Prototip araç çizimi (geçici görsel)" width="640" height="360" loading="lazy"><span class="race-year">2025</span><span class="race-name">Shell Eco-marathon</span><span class="race-desc">Enerji verimliliği yarışı</span><span class="race-role">Gömülü Sistemler Grubu Üyesi</span></li><li class="race has-img"><img class="race-img" src="fotograflar/yarislar/eko-arac.svg" alt="Prototip araç çizimi (geçici görsel)" width="640" height="360" loading="lazy"><span class="race-year">2026</span><span class="race-name">Shell Eco-marathon</span><span class="race-desc">Enerji verimliliği yarışı</span><span class="race-role">Gömülü Sistemler Grubu Sorumlusu</span></li></ol></div>
+<div style="display: none;" class="EN"><ol class="races"><li class="race has-img"><img class="race-img" src="fotograflar/yarislar/gunes-arabasi.svg" alt="Solar car illustration (placeholder)" width="640" height="360" loading="lazy"><span class="race-year">2024</span><span class="race-name">iLumen European Solar Challenge</span><span class="race-desc">European solar car race</span><span class="race-role">Embedded Systems Group Member</span></li><li class="race has-img"><img class="race-img" src="fotograflar/yarislar/eko-arac.svg" alt="Prototype car illustration (placeholder)" width="640" height="360" loading="lazy"><span class="race-year">2025</span><span class="race-name">Shell Eco-marathon</span><span class="race-desc">Energy-efficiency competition</span><span class="race-role">Embedded Systems Group Member</span></li><li class="race has-img"><img class="race-img" src="fotograflar/yarislar/eko-arac.svg" alt="Prototype car illustration (placeholder)" width="640" height="360" loading="lazy"><span class="race-year">2026</span><span class="race-name">Shell Eco-marathon</span><span class="race-desc">Energy-efficiency competition</span><span class="race-role">Embedded Systems Group Lead</span></li></ol></div>
+<div style="display: none;" class="TR"><h2 class="heading-large mb-6 text-left" style="color:#111827;font-family:'Varela Round', sans-serif;font-weight:700">Eğitim</h2></div>
+<div style="display: none;" class="EN"><h2 class="heading-large mb-6 text-left" style="color:#111827;font-family:'Varela Round', sans-serif;font-weight:700">Education</h2></div>
 <div class="cv-entry">
 <p class="cv-org">İstanbul Teknik Üniversitesi <span class="cv-sub">· Istanbul Technical University</span></p>
 <div style="display: none;" class="TR cv-row"><span class="cv-role">Lisans, Bilgisayar Mühendisliği</span><span class="cv-date">Eylül 2022 – Haziran 2027</span></div>
@@ -211,8 +242,8 @@
 <div style="display: none;" class="TR rich-text-block"><ul><li>GPA: 3.5</li><li>İTÜ İngilizce Yeterlilik Skoru: 89 (B2 seviyesine denk)</li></ul></div>
 <div style="display: none;" class="EN rich-text-block"><ul><li>GPA: 3.5</li><li>ITU English Proficiency Score: 89 (equivalent to B2)</li></ul></div>
 </div>
-<div style="display: none;" class="TR"><h2 class="heading-large mb-6 text-left" style="color:#111827;font-family:'Ubuntu', sans-serif;font-weight:700">Araştırma Projeleri</h2></div>
-<div style="display: none;" class="EN"><h2 class="heading-large mb-6 text-left" style="color:#111827;font-family:'Ubuntu', sans-serif;font-weight:700">Research Projects</h2></div>
+<div style="display: none;" class="TR"><h2 class="heading-large mb-6 text-left" style="color:#111827;font-family:'Varela Round', sans-serif;font-weight:700">Araştırma Projeleri</h2></div>
+<div style="display: none;" class="EN"><h2 class="heading-large mb-6 text-left" style="color:#111827;font-family:'Varela Round', sans-serif;font-weight:700">Research Projects</h2></div>
 <div class="cv-entry">
 <p class="cv-org">İTÜ ZES GAE ARIBA 11 Güneş Arabası için Gerçek Zamanlı Enerji Yönetim ve Haberleşme Sistemi Geliştirilmesi</p>
 <div style="display: none;" class="TR cv-row"><span class="cv-role">TÜBİTAK 2209-A Lisans Araştırma Projesi</span><span class="cv-date">Nisan 2024 – Nisan 2025</span></div>
@@ -227,8 +258,8 @@
 <div style="display: none;" class="TR rich-text-block"><ul><li>iLumen Avrupa Güneş Arabası Yarışı için motor kontrolcüsü, MPPT ve BMS telemetri verilerini kullanan bir yarış simülasyonu ve enerji yönetimi modeli geliştirildi.</li></ul></div>
 <div style="display: none;" class="EN rich-text-block"><ul><li>Developed a race simulation and energy management model for the iLumen European Solar Challenge using motor controller, MPPT and BMS telemetry data.</li></ul></div>
 </div>
-<div style="display: none;" class="TR"><h2 class="heading-large mb-6 text-left" style="color:#111827;font-family:'Ubuntu', sans-serif;font-weight:700">Yayınlar</h2></div>
-<div style="display: none;" class="EN"><h2 class="heading-large mb-6 text-left" style="color:#111827;font-family:'Ubuntu', sans-serif;font-weight:700">Publications</h2></div>
+<div style="display: none;" class="TR"><h2 class="heading-large mb-6 text-left" style="color:#111827;font-family:'Varela Round', sans-serif;font-weight:700">Yayınlar</h2></div>
+<div style="display: none;" class="EN"><h2 class="heading-large mb-6 text-left" style="color:#111827;font-family:'Varela Round', sans-serif;font-weight:700">Publications</h2></div>
 <div class="cv-entry">
 <div style="display: none;" class="TR rich-text-block"><p>E. Uzun, C. Akman, <strong>M. Çağşak</strong>, A. E. Dağ ve A. T. Çalık, “Race Simulation and Energy Management System for a Solar Car,” <em>ELECO 2025 – 16th International Conference on Electrical and Electronics Engineering</em>, Bursa, Türkiye, Kasım 2025. <a href="https://doi.org/10.1109/ELECO69582.2025.11329252" target="_blank" rel="noopener">doi.org/10.1109/ELECO69582.2025.11329252</a></p></div>
 <div style="display: none;" class="EN rich-text-block"><p>E. Uzun, C. Akman, <strong>M. Çağşak</strong>, A. E. Dağ and A. T. Çalık, “Race Simulation and Energy Management System for a Solar Car,” <em>ELECO 2025 – 16th International Conference on Electrical and Electronics Engineering</em>, Bursa, Türkiye, November 2025. <a href="https://doi.org/10.1109/ELECO69582.2025.11329252" target="_blank" rel="noopener">doi.org/10.1109/ELECO69582.2025.11329252</a></p></div>
@@ -248,47 +279,16 @@
                          "container mx-auto relative z-10 pt-8 lg:pt-12 pb-8 lg:pb-12">
                 <div style="display: none;" class="TR"  >
                     <h2 class="heading-large mb-6 text-left" style=
-                    "color:#FFFFFF;font-family:'Ubuntu', sans-serif;font-weight:700">
+                    "color:#FFFFFF;font-family:'Varela Round', sans-serif;font-weight:700">
                 Kişisel Projelerim</h2>
                 </div>
                 <div style="display: none;" class="EN"  >
                     <h2 class="heading-large mb-6 text-left" style=
-                    "color:#FFFFFF;font-family:'Ubuntu', sans-serif;font-weight:700">
+                    "color:#FFFFFF;font-family:'Varela Round', sans-serif;font-weight:700">
                 Personal Projects</h2>
                 </div>
                 <div class=
                              "flex flex-col sm:flex-row flex-wrap gap-10 justify-start">
-                    <div class="block-list-item w-full">
-                        <div class=
-                                     "flex-shrink-0 relative mb-6 aspect-w-16 aspect-h-9">
-                <span style="box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:absolute;top:0;left:0;bottom:0;right:0">
-                <a href="https://play.google.com/store/apps/details?id=com.cagsak.wordmaster" target="_blank"><img alt="Word Master" src="fotograflar/word-master.png"decoding="async" data-nimg="fill" class="rounded-lg md:rounded-xl lg:rounded-2xl" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;object-fit:cover;object-position:50% 50%"></a>
-                </span>
-                        </div>
-                        <div class="text-left">
-                            <p class="heading-medium mb-4" style=
-                                    "color:#FFFFFF;font-family:'Ubuntu', sans-serif;font-weight:700">
-                                Word Master</p>
-                            <div class="rich-text-block" style="color:#FFFFFF">
-                                <p style="display: none;" class="TR">Android üzerine geliştirdiğim bir kelime oyunu. Google Play Store üzerinden indirip oynayabilirsiniz.</p>
-                                <p style="display: none;" class="EN">A word game developed for android. You can download from Google Play Store now.</p>
-                            </div>
-                            <div style="display: none;" class="TR"> 
-                                <a class="button primary lg mt-4" target=
-                                "_self" style=
-                                   "background:transparent;border-radius:8px;color:#ffffff;border:2px solid #ffffff"
-                           href=
-                                   "https://play.google.com/store/apps/details?id=com.cagsak.wordmaster" target="_blank">Daha Fazla...</a>
-                            </div>
-                            <div style="display: none;" class="EN"> 
-                                <a class="button primary lg mt-4" target=
-                                "_self" style=
-                                   "background:transparent;border-radius:8px;color:#ffffff;border:2px solid #ffffff"
-                           href=
-                                   "https://play.google.com/store/apps/details?id=com.cagsak.wordmaster" target="_blank">See More...</a>
-                            </div>
-                        </div>
-                    </div>
                     <div class="block-list-item w-full">
                         <div class=
                                      "flex-shrink-0 relative mb-6 aspect-w-16 aspect-h-9">
@@ -298,11 +298,11 @@
                         </div>
                         <div class="text-left">
                             <p class="heading-medium mb-4" style=
-                                    "color:#FFFFFF;font-family:'Ubuntu', sans-serif;font-weight:700">
+                                    "color:#FFFFFF;font-family:'Varela Round', sans-serif;font-weight:700">
                                 Box Game</p>
                             <div class="rich-text-block" style="color:#FFFFFF">
-                                <p style="display: none;" class="TR">İlk Unity oyunum. birbirinden farklı 10 level ve 2 farklı oyun modu içeriyor. Bilgisayar veya Web üzerinden oynayabilirsiniz.</p>
-                                <p style="display: none;" class="EN">My fisrt Unity game. There are 10 different levels and 2 game modes. You can play the game from the Web or the PC.</p>
+                                <p style="display: none;" class="TR">İlk Unity oyunum. Birbirinden farklı 10 bölüm ve 2 farklı oyun modu içeriyor. Bilgisayar veya Web üzerinden oynayabilirsiniz.</p>
+                                <p style="display: none;" class="EN">My first Unity game. There are 10 different levels and 2 game modes. You can play the game from the Web or the PC.</p>
                             </div>
                             <div style="display: none;" class="TR" >
                                 <a class="button primary lg mt-4" target=
@@ -340,23 +340,23 @@
                             <h3 style="display: none;" class="TR" class=
                                         "heading-medium overflow-hidden whitespace-nowrap overflow-ellipsis xl:heading-small"
                                 style=
-                                        "color:#FFFFFF;font-family:'Ubuntu', sans-serif;font-weight:700">
+                                        "color:#FFFFFF;font-family:'Varela Round', sans-serif;font-weight:700">
                                 İletişim</h3>
                             <h3 style="display: none;" class="EN" class=
                                         "heading-medium overflow-hidden whitespace-nowrap overflow-ellipsis xl:heading-small"
                                 style=
-                                        "color:#FFFFFF;font-family:'Ubuntu', sans-serif;font-weight:700">
+                                        "color:#FFFFFF;font-family:'Varela Round', sans-serif;font-weight:700">
                                 Contact Me</h3>
                         </div>
                         <div style="display: none;" class="EN body-normal" style="color:#FFFFFF">
                             You can reach me from here: <a href=
-                                                                         "mailto: mustafacagsak1@gmail.com"
+                                                                         "mailto:mustafacagsak1@gmail.com"
                                                                  class="__cf_email__">
                             mustafacagsak1@gmail.com</a>
                         </div>
                         <div style="display: none;" class="TR body-normal" style="color:#FFFFFF">
-                            Bana bu adresten ulaşabilrisiniz: <a href=
-                                                                         "mailto: mustafacagsak1@gmail.com"
+                            Bana bu adresten ulaşabilirsiniz: <a href=
+                                                                         "mailto:mustafacagsak1@gmail.com"
                                                                  class="__cf_email__">
                             mustafacagsak1@gmail.com</a>
                         </div>
@@ -413,12 +413,6 @@
                             </li>
                         </ul>
                     </div>
-                    <p style="display: none;" class=
-                               "TR body-normal lg:text-right whitespace-nowrap !text-center">
-                        Durable kullanılarak yapıldı</p>
-                    <p style="display: none;" class=
-                        "EN body-normal lg:text-right whitespace-nowrap !text-center">
-                        Made with Durable</p>
                 </div>
             </div>
         </footer>
@@ -453,7 +447,7 @@
     }
 
     var userLang = navigator.language || navigator.userLanguage; 
-    if(userLang == "tr-TR"){
+    if(userLang && userLang.toLowerCase().indexOf("tr") === 0){
         tr();
         document.getElementsByClassName("check-toggle")[0].checked = false;
     }else{

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Enerji verimli prototip araç çizimi">
+  <rect width="640" height="360" fill="#FFE8D6"/>
+  <g fill="#FFFFFF" opacity=".9">
+    <ellipse cx="140" cy="84" rx="54" ry="18"/><ellipse cx="180" cy="72" rx="38" ry="16"/>
+    <ellipse cx="470" cy="112" rx="46" ry="15"/><ellipse cx="500" cy="102" rx="30" ry="13"/>
+  </g>
+  <rect y="268" width="640" height="92" fill="#FF4500"/>
+  <g stroke="#FFFFFF" stroke-width="6" stroke-dasharray="40 30" opacity=".85"><line x1="0" y1="318" x2="640" y2="318"/></g>
+  <!-- speed lines -->
+  <g stroke="#FA7800" stroke-width="6" stroke-linecap="round">
+    <line x1="60" y1="196" x2="130" y2="196"/><line x1="40" y1="220" x2="120" y2="220"/><line x1="76" y1="244" x2="132" y2="244"/>
+  </g>
+  <!-- teardrop body -->
+  <path d="M150 246 C 150 196, 250 150, 360 150 C 460 150, 540 200, 560 240 C 562 246, 558 250, 552 250 L 158 250 C 153 250, 150 249, 150 246 Z" fill="#FA7800" stroke="#1F2937" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M300 170 C 320 156, 380 154, 412 170 L 404 194 L 304 194 Z" fill="#9CC9E8" stroke="#1F2937" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M190 226 L 520 226" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+  <!-- wheels (partly covered) -->
+  <g fill="#1F2937"><circle cx="230" cy="256" r="16"/><circle cx="476" cy="256" r="16"/></g>
+  <g fill="#FFFFFF"><circle cx="230" cy="256" r="5"/><circle cx="476" cy="256" r="5"/></g>
+</svg>
